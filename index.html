@@ -43,7 +43,11 @@
             </p>
 
             <div class="d-flex justify-content-center">
-              <button class="cta-btn mt-3">
+              <button
+                class="cta-btn mt-3"
+                data-bs-toggle="modal"
+                data-bs-target="#parentModal"
+              >
                 <img src="./assets/white_music.png" alt="" srcset="" /> Register
                 & Upload Singing Video
               </button>
@@ -57,17 +61,212 @@
           </div>
         </div>
       </div>
+
+      <!-- parent confirmation modal -->
+      <div class="modal fade" id="parentModal">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="gradient-modal position-relative">
+              <span class="modal-close" data-bs-dismiss="modal">✕</span>
+
+              <h4 class="text-center mb-3">Parent Confirmation</h4>
+              <p class="text-center small fw-bold">
+                Parent / Guardian confirmation is required
+              </p>
+
+              <div class="form-check mb-2 form_input">
+                <input class="form-check-input" type="checkbox" />
+                <label class="form-check-label">
+                  I am the parent / legal guardian
+                </label>
+              </div>
+
+              <div class="form-check mb-4 form_input">
+                <input class="form-check-input" type="checkbox" />
+                <label class="form-check-label">
+                  I accept the Terms & Conditions
+                </label>
+              </div>
+
+              <div class="text-end">
+                <button class="black-btn btn_border" id="toMobile">
+                  Continue →
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- verify modal -->
+      <div class="modal fade" id="mobileModal">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="gradient-modal position-relative">
+              <span class="modal-close" data-bs-dismiss="modal">✕</span>
+
+              <h4 class="text-center mb-3">Verify your Mobile</h4>
+              <p class="text-center small">We will send OTP to verify</p>
+
+              <label class="mb-1" style="font-size: 10px">Mobile Number</label>
+              <input
+                type="text"
+                class="form-control mb-3"
+                placeholder="Enter 10-digit mobile number"
+              />
+
+              <div class="text-end">
+                <button class="black-btn btn_border" id="toOtp">
+                  Send OTP
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- otp verification -->
+      <div class="modal fade" id="otpModal">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="gradient-modal position-relative">
+              <span class="modal-close" data-bs-dismiss="modal">✕</span>
+
+              <h4 class="text-center mb-3">Verify OTP</h4>
+
+              <p class="small text-center">
+                OTP Sent to <strong>9097638388</strong>
+              </p>
+
+              <div class="d-flex justify-content-between mb-3">
+                <input class="form-control otp-box" />
+                <input class="form-control otp-box" />
+                <input class="form-control otp-box" />
+                <input class="form-control otp-box" />
+                <input class="form-control otp-box" />
+                <input class="form-control otp-box" />
+              </div>
+
+              <div class="text-end">
+                <button class="black-btn btn_border" id="toForm">
+                  Verify OTP
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- fill form -->
+      <div class="modal fade" id="formModal">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="gradient-modal position-relative">
+              <span class="modal-close" data-bs-dismiss="modal">✕</span>
+
+              <h4 class="text-center mb-3">Fill the form</h4>
+
+              <label class="mb-1" style="font-size: 10px">Child's Name *</label>
+              <input
+                type="text"
+                class="form-control"
+                style="border-radius: 5px"
+                placeholder="Enter Child's Full Name"
+              />
+              <label class="mb-1" style="font-size: 10px"
+                >Parent/ Guardian name</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                style="border-radius: 5px"
+                placeholder="Enter Parent/ Guardian name"
+              />
+              <label class="mb-1" style="font-size: 10px">Age (6-15)</label>
+              <input
+                type="text"
+                class="form-control"
+                style="border-radius: 5px"
+                placeholder="Enter Age"
+              />
+
+              <label class="mb-1" style="font-size: 10px">State</label>
+              <select class="form-select mb-3">
+                <option>Select State</option>
+                <option>Maharashtra</option>
+                <option>Delhi</option>
+              </select>
+
+              <div class="d-flex justify-content-between">
+                <button class="btn btn-light btn-sm" id="toOtp">← Back</button>
+                <button class="black-btn btn_border" id="toUpload">
+                  Continue →
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- upload video -->
+
+      <div class="modal fade" id="uploadModal">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="gradient-modal position-relative text-center">
+              <span class="modal-close" data-bs-dismiss="modal">✕</span>
+
+              <h4 class="mb-3">Upload Singing Video</h4>
+
+              <div class="border border-light rounded p-4 mb-3">
+                <p>Upload MP4/MOV/WMV (Max 5 mins, 100MB)</p>
+                <input type="file" class="form-control" />
+              </div>
+
+              <div class="d-flex justify-content-between">
+                <button class="btn btn-light btn-sm">← Back</button>
+                <button class="black-btn btn_border" id="toSuccess">
+                  Continue →
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- success modal -->
+      <div class="modal fade" id="successModal">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="gradient-modal text-center position-relative">
+              <span class="modal-close" data-bs-dismiss="modal">✕</span>
+
+              <h3 class="mb-3">🎉 Audition Submitted Successfully!</h3>
+              <p>Our team will review it soon.</p>
+
+              <button class="black-btn mt-3 btn_border" data-bs-dismiss="modal">
+                Done
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- BOTTOM STRIP -->
     <div class="bottom-strip">
-      <img src="./assets/song_heading.png" alt="" />
+      <img class="img_heading" src="./assets/song_heading.png" alt="" />
     </div>
 
     <section class="py-5 text-white" style="background: #0d0a1f">
       <div class="container text-center">
         <h2 class="fw-bold mb-2 heading">
-          <img src="./assets/work_heading.png" alt="" srcset="" />
+          <img
+            class="img_heading"
+            src="./assets/work_heading.png"
+            alt=""
+            srcset=""
+          />
         </h2>
         <p class="mb-5" style="color: #b3abba">
           Four simple steps to the spotlight
@@ -90,9 +289,15 @@
           <div class="col-md-3 mb-4 position-relative">
             <div class="step-circle">
               <img src="./assets/headphone.png" alt="" />
+              <img
+                class="small_icon"
+                src="./assets/small_headphone.png"
+                alt=""
+                srcset=""
+              />
             </div>
             <p class="step_text small mt-2">Step 1</p>
-            <h6>Register</h6>
+            <h6 class="steps_heading">Register</h6>
             <small class="text_color">Parent verifies mobile number</small>
           </div>
 
@@ -100,17 +305,31 @@
           <div class="col-md-3 mb-4 position-relative">
             <div class="step-circle">
               <img src="./assets/user.png" alt="" />
+              <img
+                class="small_icon"
+                src="./assets/small_user.png"
+                alt=""
+                srcset=""
+              />
             </div>
             <p class="step_text small mt-2">Step 2</p>
-            <h6>Child Details</h6>
+            <h6 class="steps_heading">Child Details</h6>
             <small class="text_color">Name, age, location</small>
           </div>
 
           <!-- Step 3 -->
           <div class="col-md-3 mb-4 position-relative">
-            <div class="step-circle"><img src="./assets/mic.png" alt="" /></div>
+            <div class="step-circle">
+              <img src="./assets/mic.png" alt="" />
+              <img
+                class="small_icon"
+                src="./assets/small_mic.png"
+                alt=""
+                srcset=""
+              />
+            </div>
             <p class="step_text small mt-2">Step 3</p>
-            <h6>Upload Song</h6>
+            <h6 class="steps_heading">Upload Song</h6>
             <small class="text_color">One performance video</small>
           </div>
 
@@ -118,9 +337,15 @@
           <div class="col-md-3 mb-4 position-relative">
             <div class="step-circle">
               <img src="./assets/star.png" alt="" />
+              <img
+                class="small_icon"
+                src="./assets/small_star.png"
+                alt=""
+                srcset=""
+              />
             </div>
             <p class="step_text small mt-2">Step 4</p>
-            <h6>Submit</h6>
+            <h6 class="steps_heading">Submit</h6>
             <small class="text_color">Our experts review</small>
           </div>
         </div>
@@ -131,7 +356,12 @@
     <section class="py-5 text-white" style="background: #0d0a1f">
       <div class="container">
         <h2 class="fw-bold text-center mb-5 heading">
-          <img src="./assets/guideline_heading.png" alt="" srcset="" />
+          <img
+            class="img_heading"
+            src="./assets/guideline_heading.png"
+            alt=""
+            srcset=""
+          />
         </h2>
 
         <div class="row g-4 justify-content-center">
@@ -139,21 +369,22 @@
           <div class="col-md-5">
             <div class="guideline-card p-4">
               <h5 class="mb-3">
-                <img src="./assets/guidline_music.png" alt="" /> Performance
-                Tips
+                <img src="./assets/guidline_music.png" alt="" />
+                <span>Performance Tips</span>
               </h5>
               <ul class="list-unstyled">
                 <li>
-                  <img src="./assets/yellow_tune.png" alt="" srcset="" /> Sing
-                  clearly and confidently
+                  <img src="./assets/yellow_tune.png" alt="" srcset="" /><span>
+                    Sing clearly and confidently</span
+                  >
                 </li>
                 <li>
-                  <img src="./assets/yellow_tune.png" alt="" srcset="" /> One
-                  song only per submission
+                  <img src="./assets/yellow_tune.png" alt="" srcset="" />
+                  <span>One song only per submission</span>
                 </li>
                 <li>
-                  <img src="./assets/yellow_tune.png" alt="" srcset="" /> Child
-                  must be clearly visible
+                  <img src="./assets/yellow_tune.png" alt="" srcset="" />
+                  <span>Child must be clearly visible</span>
                 </li>
               </ul>
             </div>
@@ -163,20 +394,21 @@
           <div class="col-md-5">
             <div class="guideline-card p-4">
               <h5 class="mb-3">
-                <img src="./assets/tech.png" alt="" srcset="" /> Tech Specs
+                <img src="./assets/tech.png" alt="" srcset="" />
+                <span>Tech Specs</span>
               </h5>
               <ul class="list-unstyled">
                 <li>
-                  <img src="./assets/box.png" alt="" srcset="" /> Max 5 minutes
-                  duration
+                  <img src="./assets/box.png" alt="" srcset="" />
+                  <span>Max 5 minutes duration</span>
                 </li>
                 <li>
-                  <img src="./assets/box.png" alt="" srcset="" /> Max 100 MB
-                  file size
+                  <img src="./assets/box.png" alt="" srcset="" />
+                  <span>Max 100 MB file size</span>
                 </li>
                 <li>
-                  <img src="./assets/box.png" alt="" srcset="" /> MP4 / MOV /
-                  WMV formats
+                  <img src="./assets/box.png" alt="" srcset="" />
+                  <span>MP4 / MOV / WMV formats</span>
                 </li>
               </ul>
             </div>
@@ -202,7 +434,7 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="text-white">
+    <footer style="color: #b3abba">
       <div
         class="container d-md-flex justify-content-between text-center text-md-start"
       >
@@ -220,5 +452,48 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        function switchModal(currentId, nextId) {
+          let currentModal = bootstrap.Modal.getInstance(
+            document.getElementById(currentId),
+          );
+          currentModal.hide();
+
+          let nextModal = new bootstrap.Modal(document.getElementById(nextId));
+          nextModal.show();
+        }
+
+        document
+          .getElementById("toMobile")
+          .addEventListener("click", function () {
+            switchModal("parentModal", "mobileModal");
+          });
+
+        document.getElementById("toOtp").addEventListener("click", function () {
+          switchModal("mobileModal", "otpModal");
+        });
+
+        document
+          .getElementById("toForm")
+          .addEventListener("click", function () {
+            switchModal("otpModal", "formModal");
+          });
+
+        document
+          .getElementById("toUpload")
+          .addEventListener("click", function () {
+            switchModal("formModal", "uploadModal");
+          });
+
+        document
+          .getElementById("toSuccess")
+          .addEventListener("click", function () {
+            switchModal("uploadModal", "successModal");
+          });
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
