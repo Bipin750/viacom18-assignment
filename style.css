@@ -1,0 +1,132 @@
+body {
+  background-color: #0d0a1f;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+.hero-section {
+  background: #000;
+}
+
+.hero-title span.highlight {
+  color: #ffb400;
+}
+
+.sub-text {
+  font-size: 25px;
+  margin-top: 15px;
+}
+.orange-text {
+  color: #ffc107;
+}
+.hero-heading {
+  font-size: 50px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #ffffff;
+}
+
+.hero-heading .highlight {
+  color: #ffb400; /* Yellow tone from image */
+}
+
+span {
+  padding: 0 10px;
+}
+.cta-btn {
+  background: linear-gradient(90deg, #ff9a00, #ff3c8e);
+  border: none;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-weight: 600;
+  color: white;
+  transition: 0.3s ease;
+}
+
+.cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 60, 142, 0.4);
+}
+
+.bottom-strip {
+  background: linear-gradient(90deg, #4d1f7a, #cf1773, #0da6f2, #4d1f7a);
+  padding: 25px 0;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 25px;
+  font-family: "Poppins", sans-serif;
+}
+
+.logo-img {
+  max-width: 100%;
+  height: auto;
+}
+.heading {
+  font-size: 48px;
+}
+.step-circle {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(#261736, #401c2e);
+  border: 2px solid #e8308c66;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  margin: auto;
+  position: relative;
+  z-index: 2;
+  /* box-shadow: 0 0 15px rgba(255, 60, 142, 0.4); */
+}
+.center-line {
+  top: 20%;
+}
+.text_color {
+  color: #b3abba;
+}
+li {
+  padding: 2px;
+  color: #b3abba;
+}
+h5 {
+  color: #fafafa;
+}
+.guideline-card {
+  background: linear-gradient(145deg, #261736, #401c2e);
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  transition: 0.3s ease;
+  border: 1px solid #e8308c33;
+}
+
+.guideline-card:hover {
+  transform: translateY(-5px);
+}
+
+footer a:hover {
+  color: #ff3c8e !important;
+}
+.danger {
+  background: #ef44441a;
+  color: white;
+  padding: 15px;
+  border-radius: 16px;
+  font-weight: 600;
+  border: 1px solid #ef44444d;
+}
+.danger_icon {
+  padding: 0 10px;
+}
+.step_text {
+  color: #e8308c;
+}
+footer {
+  background: #1f1726;
+  padding: 40px 15%;
+  font-size: 12px;
+}
+.footer_text {
+  color: #b3abba;
+}
