@@ -56,11 +56,16 @@ span {
   letter-spacing: 1px;
   font-size: 25px;
   font-family: "Poppins", sans-serif;
+  background-image: url(./assets/color_line.png);
 }
 
 .logo-img {
   max-width: 100%;
   height: auto;
+  position: absolute;
+  top: -12%;
+  width: 60%;
+  height: 70%;
 }
 .heading {
   font-size: 48px;
@@ -85,6 +90,7 @@ span {
 }
 .text_color {
   color: #b3abba;
+  font-size: 12px;
 }
 li {
   padding: 2px;
@@ -139,6 +145,12 @@ footer {
 .steps_heading {
   font-size: 20px;
   color: #fafafa;
+  font-family: Fredoka;
+  font-weight: lighter;
+}
+.fredoka {
+  font-family: "Fredoka", cursive;
+  font-weight: lighter;
 }
 
 .gradient-modal {
@@ -147,8 +159,13 @@ footer {
   color: white;
   padding: 30px;
   border: none;
+  height: 420px;
 }
-
+.banner_img {
+  position: absolute;
+  top: 0;
+  width: 60%;
+}
 .modal-content {
   background: transparent;
   border: none;
@@ -197,8 +214,6 @@ footer {
   font-size: 20px;
   border-radius: 10px;
 }
-.modal_heading {
-}
 .form_input {
   background: #fff;
   padding: 10px 35px;
@@ -221,5 +236,9 @@ footer {
   }
   .center-line {
     display: none;
+  }
+  .logo-img {
+    position: relative;
+    width: 100%;
   }
 }

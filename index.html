@@ -10,6 +10,12 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Neucha&family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -18,7 +24,14 @@
       <div class="">
         <div class="row align-items-center">
           <!-- LEFT LOGO -->
-          <div class="col-md-6 text-center mb-4 mb-md-0">
+          <nav>
+            <img
+              style="height: 100px; margin: 10px"
+              src="./assets/logo_header.png"
+              alt=""
+            />
+          </nav>
+          <div class="col-md-6 text-center mb-4 mb-md-0 d-flex">
             <img
               src="./assets/banner_img.png"
               alt="Super Singer Junior"
@@ -38,7 +51,9 @@
               </div>
             </h1>
 
-            <p class="sub-text d-flex justify-content-center orange-text">
+            <p
+              class="sub-text d-flex justify-content-center orange-text fredoka"
+            >
               Online Auditions Open | Ages 6–15
             </p>
 
@@ -54,7 +69,7 @@
             </div>
 
             <p
-              class="mt-3 text-light small d-flex justify-content-center sub-text"
+              class="mt-3 text-light small d-flex justify-content-center sub-text fredoka"
             >
               Parent / Guardian submission only
             </p>
@@ -68,7 +83,9 @@
           <div class="modal-content">
             <div class="gradient-modal position-relative">
               <span class="modal-close" data-bs-dismiss="modal">✕</span>
-
+              <div class="text-center">
+                <img src="./assets/small_banner.png" alt="" />
+              </div>
               <h4 class="text-center mb-3">Parent Confirmation</h4>
               <p class="text-center small fw-bold">
                 Parent / Guardian confirmation is required
@@ -104,7 +121,9 @@
           <div class="modal-content">
             <div class="gradient-modal position-relative">
               <span class="modal-close" data-bs-dismiss="modal">✕</span>
-
+              <div class="text-center">
+                <img src="./assets/small_banner.png" alt="" />
+              </div>
               <h4 class="text-center mb-3">Verify your Mobile</h4>
               <p class="text-center small">We will send OTP to verify</p>
 
@@ -131,7 +150,9 @@
           <div class="modal-content">
             <div class="gradient-modal position-relative">
               <span class="modal-close" data-bs-dismiss="modal">✕</span>
-
+              <div class="text-center">
+                <img src="./assets/small_banner.png" alt="" />
+              </div>
               <h4 class="text-center mb-3">Verify OTP</h4>
 
               <p class="small text-center">
@@ -161,9 +182,14 @@
       <div class="modal fade" id="formModal">
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
-            <div class="gradient-modal position-relative">
+            <div
+              class="gradient-modal position-relative"
+              style="min-height: 500px"
+            >
               <span class="modal-close" data-bs-dismiss="modal">✕</span>
-
+              <div class="text-center">
+                <img src="./assets/small_banner.png" alt="" />
+              </div>
               <h4 class="text-center mb-3">Fill the form</h4>
 
               <label class="mb-1" style="font-size: 10px">Child's Name *</label>
@@ -215,7 +241,9 @@
           <div class="modal-content">
             <div class="gradient-modal position-relative text-center">
               <span class="modal-close" data-bs-dismiss="modal">✕</span>
-
+              <div class="text-center">
+                <img src="./assets/small_banner.png" alt="" />
+              </div>
               <h4 class="mb-3">Upload Singing Video</h4>
 
               <div class="border border-light rounded p-4 mb-3">
@@ -240,7 +268,9 @@
           <div class="modal-content">
             <div class="gradient-modal text-center position-relative">
               <span class="modal-close" data-bs-dismiss="modal">✕</span>
-
+              <div class="text-center">
+                <img src="./assets/small_banner.png" alt="" />
+              </div>
               <h3 class="mb-3">🎉 Audition Submitted Successfully!</h3>
               <p>Our team will review it soon.</p>
 
@@ -268,7 +298,7 @@
             srcset=""
           />
         </h2>
-        <p class="mb-5" style="color: #b3abba">
+        <p class="mb-5" style="color: #b3abba; font-size: 18px">
           Four simple steps to the spotlight
         </p>
 
@@ -296,7 +326,7 @@
                 srcset=""
               />
             </div>
-            <p class="step_text small mt-2">Step 1</p>
+            <p class="step_text small mt-2 fredoka">Step 1</p>
             <h6 class="steps_heading">Register</h6>
             <small class="text_color">Parent verifies mobile number</small>
           </div>
@@ -312,7 +342,7 @@
                 srcset=""
               />
             </div>
-            <p class="step_text small mt-2">Step 2</p>
+            <p class="step_text small mt-2 fredoka">Step 2</p>
             <h6 class="steps_heading">Child Details</h6>
             <small class="text_color">Name, age, location</small>
           </div>
@@ -328,7 +358,7 @@
                 srcset=""
               />
             </div>
-            <p class="step_text small mt-2">Step 3</p>
+            <p class="step_text small mt-2 fredoka">Step 3</p>
             <h6 class="steps_heading">Upload Song</h6>
             <small class="text_color">One performance video</small>
           </div>
@@ -344,7 +374,7 @@
                 srcset=""
               />
             </div>
-            <p class="step_text small mt-2">Step 4</p>
+            <p class="step_text small mt-2 fredoka">Step 4</p>
             <h6 class="steps_heading">Submit</h6>
             <small class="text_color">Our experts review</small>
           </div>
@@ -370,9 +400,9 @@
             <div class="guideline-card p-4">
               <h5 class="mb-3">
                 <img src="./assets/guidline_music.png" alt="" />
-                <span>Performance Tips</span>
+                <span class="fredoka">Performance Tips</span>
               </h5>
-              <ul class="list-unstyled">
+              <ul class="list-unstyled fredoka">
                 <li>
                   <img src="./assets/yellow_tune.png" alt="" srcset="" /><span>
                     Sing clearly and confidently</span
@@ -395,9 +425,9 @@
             <div class="guideline-card p-4">
               <h5 class="mb-3">
                 <img src="./assets/tech.png" alt="" srcset="" />
-                <span>Tech Specs</span>
+                <span class="fredoka">Tech Specs</span>
               </h5>
-              <ul class="list-unstyled">
+              <ul class="list-unstyled fredoka">
                 <li>
                   <img src="./assets/box.png" alt="" srcset="" />
                   <span>Max 5 minutes duration</span>
@@ -436,11 +466,14 @@
     <!-- FOOTER -->
     <footer style="color: #b3abba">
       <div
-        class="container d-md-flex justify-content-between text-center text-md-start"
+        class="container d-md-flex justify-content-between text-center align-items-center"
       >
-        <p class="mb-2 mb-md-0 footer_text">
-          © 2026 JioStar · Super Singer Junior Season 11
-        </p>
+        <div class="d-flex align-items-center">
+          <span><img src="./assets/logo_footer.png" alt="" /></span>
+          <p class="mb-2 mb-md-0 footer_text">
+            © 2026 JioStar · Super Singer Junior Season 11
+          </p>
+        </div>
         <div>
           <a href="#" class="text-decoration-none me-3 footer_text"
             >Terms & Conditions</a
