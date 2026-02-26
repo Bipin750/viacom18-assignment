@@ -20,17 +20,18 @@
   </head>
   <body>
     <!-- HERO SECTION -->
+    <nav class="navbar navbar-dark">
+      <img
+        style="height: 100px; margin: 10px"
+        src="./assets/logo_header.png"
+        alt=""
+      />
+    </nav>
     <section class="hero-section">
       <div class="">
         <div class="row align-items-center">
           <!-- LEFT LOGO -->
-          <nav>
-            <img
-              style="height: 100px; margin: 10px"
-              src="./assets/logo_header.png"
-              alt=""
-            />
-          </nav>
+
           <div class="col-md-6 text-center mb-4 mb-md-0 d-flex">
             <img
               src="./assets/banner_img.png"
@@ -86,22 +87,27 @@
               <div class="text-center">
                 <img src="./assets/small_banner.png" alt="" />
               </div>
-              <h4 class="text-center mb-3">Parent Confirmation</h4>
-              <p class="text-center small fw-bold">
+              <div class="slider-dot">
+                <span class="active"></span>
+                <span></span>
+                <span></span>
+              </div>
+              <h4 class="text-center mb-3 fw-bold">Parent Confirmation</h4>
+              <p class="text-center small">
                 Parent / Guardian confirmation is required
               </p>
 
-              <div class="form-check mb-2 form_input">
+              <div class="form-check custom-check mb-2 form_input">
                 <input class="form-check-input" type="checkbox" />
                 <label class="form-check-label">
                   I am the parent / legal guardian
                 </label>
               </div>
 
-              <div class="form-check mb-4 form_input">
+              <div class="form-check mb-4 form_input custom-check">
                 <input class="form-check-input" type="checkbox" />
                 <label class="form-check-label">
-                  I accept the Terms & Conditions
+                  I accept the <a href="#" class="link"> Terms & Conditions</a>
                 </label>
               </div>
 
@@ -124,8 +130,13 @@
               <div class="text-center">
                 <img src="./assets/small_banner.png" alt="" />
               </div>
-              <h4 class="text-center mb-3">Verify your Mobile</h4>
-              <p class="text-center small">We will send OTP to verify</p>
+              <div class="slider-dot">
+                <span></span>
+                <span class="active"></span>
+                <span></span>
+              </div>
+              <h4 class="text-center mb-3 fw-bold">Verify your Mobile</h4>
+              <p class="text-center">We will send OTP to verify</p>
 
               <label class="mb-1" style="font-size: 10px">Mobile Number</label>
               <input
@@ -153,13 +164,24 @@
               <div class="text-center">
                 <img src="./assets/small_banner.png" alt="" />
               </div>
-              <h4 class="text-center mb-3">Verify OTP</h4>
 
-              <p class="small text-center">
-                OTP Sent to <strong>9097638388</strong>
-              </p>
+              <div class="slider-dot">
+                <span></span>
+                <span class="active"></span>
+                <span></span>
+              </div>
+              <h4 class="text-center mb-3 fw-bold">Verify you Mobile</h4>
 
-              <div class="d-flex justify-content-between mb-3">
+              <div
+                class="border rounded border-white d-flex justify-content-between align-items-end p-3 mb-3"
+              >
+                <p class="small text-center m-0">
+                  OTP Sent to <br /><strong>9097638388</strong>
+                </p>
+                <p class="underline cursor-pointer m-0">change</p>
+              </div>
+              <p class="small fw-bold text-center">Enter 6-digit OTP</p>
+              <div class="d-flex justify-content-center gap-3">
                 <input class="form-control otp-box" />
                 <input class="form-control otp-box" />
                 <input class="form-control otp-box" />
@@ -167,7 +189,9 @@
                 <input class="form-control otp-box" />
                 <input class="form-control otp-box" />
               </div>
-
+              <p class="small fw-bold text-center mt-3">
+                Resend OTP in <span class="text-warning"> 54s</span>
+              </p>
               <div class="text-end">
                 <button class="black-btn btn_border" id="toForm">
                   Verify OTP
@@ -190,7 +214,12 @@
               <div class="text-center">
                 <img src="./assets/small_banner.png" alt="" />
               </div>
-              <h4 class="text-center mb-3">Fill the form</h4>
+              <div class="slider-dot">
+                <span></span>
+                <span class="active"></span>
+                <span></span>
+              </div>
+              <h4 class="text-center mb-3 fw-bold">Fill the form</h4>
 
               <label class="mb-1" style="font-size: 10px">Child's Name *</label>
               <input
@@ -223,8 +252,10 @@
                 <option>Delhi</option>
               </select>
 
-              <div class="d-flex justify-content-between">
-                <button class="btn btn-light btn-sm" id="toOtp">← Back</button>
+              <div class="d-flex justify-content-between align-items-center">
+                <p class="cursor-pointer text-black m-0 fw-bold" id="toOtp">
+                  ← Back
+                </p>
                 <button class="black-btn btn_border" id="toUpload">
                   Continue →
                 </button>
@@ -244,15 +275,60 @@
               <div class="text-center">
                 <img src="./assets/small_banner.png" alt="" />
               </div>
-              <h4 class="mb-3">Upload Singing Video</h4>
+              <div class="slider-dot">
+                <span></span>
+                <span></span>
+                <span class="active"></span>
+              </div>
+              <h4 class="mb-3 fw-bold">Upload Singing Video</h4>
 
-              <div class="border border-light rounded p-4 mb-3">
-                <p>Upload MP4/MOV/WMV (Max 5 mins, 100MB)</p>
-                <input type="file" class="form-control" />
+              <div
+                class="border border-light border-dashed rounded-3 p-4 video-upload-wrp text-center text-light"
+              >
+                <img
+                  class="video-upload__icon"
+                  src="./assets/upload.png"
+                  alt="upload"
+                  width="25"
+                  height="25"
+                />
+                <h6 class="video-upload__title fw-bold">
+                  Upload singing video
+                </h6>
+                <p class="video-upload__subtitle mt-1 mb-0">
+                  MP4,MOV,WMV-Max 5 min-Max 100 MB
+                </p>
+                <input
+                  id="file_upload"
+                  type="file"
+                  class="form-control d-none"
+                />
+
+                <button
+                  type="button"
+                  class="choose-file-btn bg-light fw-bold text-center text-dark"
+                  id="upload_file_btn"
+                >
+                  Choose File
+                </button>
               </div>
 
-              <div class="d-flex justify-content-between">
-                <button class="btn btn-light btn-sm">← Back</button>
+              <p class="warning-txt mb-0 text-dark">
+                <img
+                  src="./assets/warning.svg"
+                  alt="warning"
+                  width="9"
+                  height="9"
+                />
+                Once submitted, videos cannot be edited or withdrawn.
+              </p>
+
+              <div
+                class="d-flex justify-content-between align-items-center mt-3"
+              >
+                <p class="cursor-pointer text-black m-0 fw-bold" id="toOtp">
+                  ← Back
+                </p>
                 <button class="black-btn btn_border" id="toSuccess">
                   Continue →
                 </button>
@@ -271,10 +347,19 @@
               <div class="text-center">
                 <img src="./assets/small_banner.png" alt="" />
               </div>
-              <h3 class="mb-3">🎉 Audition Submitted Successfully!</h3>
-              <p>Our team will review it soon.</p>
+              <img src="./assets/celeberate.png" alt="done" class="my-5" />
+              <h3 class="mb-3 fs-4 fw-bold">
+                Audition Submitted Successfully!
+              </h3>
+              <p>
+                Thank you, Rohan! Weve received d's audition video. <br />
+                Our team will review it soon.
+              </p>
 
-              <button class="black-btn mt-3 btn_border" data-bs-dismiss="modal">
+              <button
+                class="black-btn mt-3 btn_border px-4"
+                data-bs-dismiss="modal"
+              >
                 Done
               </button>
             </div>
@@ -526,6 +611,11 @@
             switchModal("uploadModal", "successModal");
           });
       });
+      document
+        .getElementById("upload_file_btn")
+        .addEventListener("click", function () {
+          document.getElementById("file_upload").click();
+        });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>

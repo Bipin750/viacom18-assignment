@@ -2,6 +2,7 @@ body {
   background-color: #0d0a1f;
   font-family: "Poppins", sans-serif;
   color: white;
+  overflow-x: hidden;
 }
 
 .hero-section {
@@ -13,7 +14,7 @@ body {
 }
 
 .sub-text {
-  font-size: 25px;
+  font-size: 18px;
   margin-top: 10%;
 }
 .orange-text {
@@ -47,7 +48,9 @@ span {
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(255, 60, 142, 0.4);
 }
-
+.navbar {
+  background: #000;
+}
 .bottom-strip {
   background: linear-gradient(90deg, #4d1f7a, #cf1773, #0da6f2, #4d1f7a);
   padding: 25px 0;
@@ -64,8 +67,26 @@ span {
   height: auto;
   position: absolute;
   top: -12%;
-  width: 60%;
-  height: 70%;
+  height: 85%;
+}
+.slider-dot {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin: 20px 0;
+}
+.slider-dot span {
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  border-radius: 25px;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+  padding: 0;
+}
+.slider-dot span.active {
+  opacity: 1;
+  width: 24px;
 }
 .heading {
   font-size: 48px;
@@ -159,7 +180,58 @@ footer {
   color: white;
   padding: 30px;
   border: none;
-  height: 420px;
+}
+/* Remove default bootstrap appearance */
+.custom-check .form-check-input {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #f5a623; /* Orange */
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  cursor: pointer;
+  position: relative;
+  top: -3px;
+}
+
+/* Remove blue focus shadow */
+.custom-check .form-check-input:focus {
+  box-shadow: none;
+}
+.link {
+  color: #b32c75;
+  cursor: pointer;
+  text-decoration: none;
+}
+input::placeholder,
+.form-control::placeholder,
+.form-select::placeholder {
+  color: #9f9f9f;
+}
+.form-select {
+  color: grey;
+}
+.form-control {
+  padding: 10px;
+}
+/* Checked State */
+.custom-check .form-check-input:checked {
+  background-color: #f5a623;
+  border-color: #f5a623;
+}
+
+/* Tick mark */
+.custom-check .form-check-input:checked::after {
+  content: "";
+  position: absolute;
+  left: 9px;
+  top: 4px;
+  width: 8px;
+  height: 16px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
 }
 .banner_img {
   position: absolute;
@@ -213,6 +285,7 @@ footer {
   text-align: center;
   font-size: 20px;
   border-radius: 10px;
+  background: transparent;
 }
 .form_input {
   background: #fff;
@@ -224,6 +297,59 @@ footer {
 .btn_border {
   border: 1px solid #fff;
 }
+.border-dashed {
+  border-style: dashed !important;
+}
+
+.video-upload-wrp {
+  font-family: "Inter", sans-serif;
+  line-height: 1.2;
+}
+
+.video-upload__icon {
+  width: 25px;
+  height: 25px;
+  margin-bottom: 11px;
+}
+
+.video-upload__title {
+  font-size: 12px;
+}
+
+.video-upload__subtitle {
+  font-size: 9px;
+}
+
+.choose-file-btn {
+  border-radius: 100px;
+  font-size: 10px;
+  margin-top: 18px;
+  padding: 7px 14px;
+  transition: all 0.3s;
+  border: none;
+  line-height: initial;
+}
+.choose-file-btn:hover {
+  opacity: 0.9;
+  border: none;
+}
+.choose-file-btn:focus {
+  outline: none;
+}
+
+.warning-txt {
+  font-size: 9px;
+  text-align: center;
+  margin-top: 6px;
+}
+
+.warning-txt img {
+  width: 9px;
+  height: 9px;
+  margin-right: 3px;
+  vertical-align: middle;
+}
+
 @media (max-width: 768px) {
   .img_heading {
     width: 100%;
@@ -240,5 +366,10 @@ footer {
   .logo-img {
     position: relative;
     width: 100%;
+  }
+}
+@media (max-width: 1025px) {
+  .logo-img {
+    width: 60%;
   }
 }
